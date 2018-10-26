@@ -29,7 +29,23 @@ connection.connect(function (err) {
 // 2. View low inventory
 // 3. Add to Inventory
 // 4. Add New Product
-// function viewProducts(){
-    
-//}
+    // function viewProducts(){
+        // SQL query (SELECT * FROM products)
+        // for loop to iterate over all items
+        // console.log(res.itemid, res.names,res.price, res.stockQuantity)
+    //}
+    // function viewLowInventory(){
+        // SQL query (SELECT * FROM products WHERE stockQuantity < 5)
+        // console.log(res.itemid, res.names,res.price, res.stockQuantity)
+    //}
+    // function addToInventory(){
+        // allow manager to update stockQuantity of an item
+        // inquirer.prompt("which item would you like to update?")
+        // console.log('current stockQuantity')
+        // inquirer.prompt("how much would you like to add?")
+        // console.log('new stockQuantity = #)
+    //}
+    // function addNewProduct(){
+        // SQL query (INSERT INTO products (name, price, stockQuantity) VALUES (res.name, res.price,res.StockQuantity)
+    //}
   
