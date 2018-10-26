@@ -34,14 +34,15 @@ connection.connect(function (err) {
         // console.log("Insufficient quantity!")
     //}
     // else{
-        // function updateStockQuantity(){
-            // sql query (SELECT stockQuantity FROM products WHERE id = ?) to pull stockQuantity
-            // var newQuantity = stockQuantity - unitsRequested
-            // sql query (UPDATE products SET stockQUANTITY = newQuantity)
-            // init();
-        //}
         // function fulfillOrder(){
-            // console.log(cost of purchase)
+            // update stockQuantity
+                // sql query (SELECT stockQuantity FROM products WHERE id = ?) to pull stockQuantity
+                // var newQuantity = stockQuantity - unitsRequested
+                // sql query (UPDATE products SET stockQUANTITY = newQuantity)
+            // display cost of purchase
+                // var cost = unitsRequested * price
+                // console.log(cost);
+            // init();
         //}
     //}
 //}
