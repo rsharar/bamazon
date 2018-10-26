@@ -22,3 +22,10 @@ connection.connect(function (err) {
     if (err) throw err;
     console.log("connected as id " + connection.threadId);
 });
+
+// use inq.prompt to give ask user 2 things
+// 1. what is the ID of the product you want to buy?
+// 2. how many units of the product do you want to buy?
+// function checkQuantity(){
+
+//}
