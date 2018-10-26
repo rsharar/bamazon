@@ -23,6 +23,21 @@ connection.connect(function (err) {
     console.log("connected as id " + connection.threadId);
 });
 
+//
+function init(){
+    inq.prompt([
+        {
+            name: "choosetask",
+            text: "Hello Manager! What do you need to do today?",
+            type: "list",
+            choices: ["View products for sale","View low inventory","Add to Inventory","Add New Product"]
+        }
+    ]).then(function(res){
+        console.log(res.choosetask)
+    })
+}
+
+init();
 // function init(){}
 // use inq.prompt to give ask user 2 things
 // 1. View products for sale
