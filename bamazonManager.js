@@ -33,7 +33,20 @@ function init(){
             choices: ["View products for sale","View low inventory","Add to Inventory","Add New Product"]
         }
     ]).then(function(res){
-        console.log(res.choosetask)
+        switch(res.choosetask){
+            case "View products for sale":
+            viewProducts();
+            break;
+            case "View low inventory":
+            viewLowInventory();
+            break;
+            case "Add to Inventory":
+            addInventory();
+            break;
+            case "Add New Product":
+            addNewProdut();
+            break;
+        }
     })
 }
 
@@ -53,7 +66,7 @@ init();
         // SQL query (SELECT * FROM products WHERE stockQuantity < 5)
         // console.log(res.itemid, res.names,res.price, res.stockQuantity)
     //}
-    // function addToInventory(){
+    // function addInventory(){
         // allow manager to update stockQuantity of an item
         // inquirer.prompt("which item would you like to update?")
         // console.log('current stockQuantity')
