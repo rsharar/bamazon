@@ -26,6 +26,18 @@ connection.connect(function (err) {
 // use inq.prompt to give ask user 2 things
 // 1. what is the ID of the product you want to buy?
 // 2. how many units of the product do you want to buy?
+// check if the quantity of a product is available to buy
 // function checkQuantity(){
-
+    // sql query to products table in bamazon DB to return stockquantity based on itemid
+    // if (stockQuantity < unitsRequested){
+        // console.log("Insufficient quantity!")
+    //}
+    // else{
+        // function updateStockQuantity(){
+            // TODO: 
+        //}
+        // function fulfillOrder(){
+            // console.log(cost of purchase)
+        //}
+    //}
 //}
