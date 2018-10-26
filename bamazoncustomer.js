@@ -23,6 +23,7 @@ connection.connect(function (err) {
     console.log("connected as id " + connection.threadId);
 });
 
+// function init(){}
 // use inq.prompt to give ask user 2 things
 // 1. what is the ID of the product you want to buy?
 // 2. how many units of the product do you want to buy?
@@ -34,7 +35,10 @@ connection.connect(function (err) {
     //}
     // else{
         // function updateStockQuantity(){
-            // TODO: 
+            // sql query (SELECT stockQuantity FROM products WHERE id = ?) to pull stockQuantity
+            // var newQuantity = stockQuantity - unitsRequested
+            // sql query (UPDATE products SET stockQUANTITY = newQuantity)
+            // init();
         //}
         // function fulfillOrder(){
             // console.log(cost of purchase)
