@@ -27,8 +27,8 @@ connection.connect(function (err) {
 function init(){
     inq.prompt([
         {
+            message: "Hello Manager! What do you need to do today?",
             name: "choosetask",
-            text: "Hello Manager! What do you need to do today?",
             type: "list",
             choices: ["View products for sale","View low inventory","Add to Inventory","Add New Product"]
         }
@@ -56,6 +56,19 @@ function viewProducts(){
             if (err) throw err;
             for (i in results){
                 console.log("Item: " + results[i].productname + ", Price: " + results[i].price + ", Available Quantity: " + results[i].stockQuantity)
+            }
+            connection.end();
+            init();
+        }
+    )
+}
+
+function viewLowInventory(){
+    connection.query(
+        "SELECT * FROM products WHERE stockquantity < 5", function(err, results){
+            if (err) throw err;
+            for (i in results){
+                console.log("Item: " + results[i].productname + ", Price: " + results[i].price + ", Available Quantity: " + results[i].stockquantity)
             }
             connection.end();
         }
