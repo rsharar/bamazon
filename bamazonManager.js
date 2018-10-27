@@ -74,22 +74,41 @@ function viewLowInventory(){
         }
     )
 }
+
+function addInventory(){
+    connection.query("SELECT * FROM products", function(err,results){
+        if (err) throw err;
+    inq.prompt([
+        {
+            type: "list",
+            name: "itemlist",
+            message: "Which item do you need to update?",
+            choices: function(){
+                var itemList = [];
+                        for (var i = 0; i < results.length; i++){
+                        itemList.push(results[i].productname);
+                        }
+                        return itemList;
+                    }
+        },
+        {
+            type: "input",
+            name: "inventorynum",
+            message: "How many items would you like to add to the inventory for this item?",
+            validate: function(value) {
+                if (isNaN(value) === false) {
+                  return true;
+                }
+                return false;
+            }
+        }
+        ]).then(function(res){
+            console.log(res.inventorynum);
+        })
+    })
+}
+
 init();
-// function init(){}
-// use inq.prompt to give ask user 2 things
-// 1. View products for sale
-// 2. View low inventory
-// 3. Add to Inventory
-// 4. Add New Product
-    // function viewProducts(){
-        // SQL query (SELECT * FROM products)
-        // for loop to iterate over all items
-        // console.log(res.itemid, res.names,res.price, res.stockQuantity)
-    //}
-    // function viewLowInventory(){
-        // SQL query (SELECT * FROM products WHERE stockQuantity < 5)
-        // console.log(res.itemid, res.names,res.price, res.stockQuantity)
-    //}
     // function addInventory(){
         // allow manager to update stockQuantity of an item
         // inquirer.prompt("which item would you like to update?")
