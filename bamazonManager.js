@@ -50,6 +50,17 @@ function init(){
     })
 }
 
+function viewProducts(){
+    connection.query(
+        "SELECT * FROM products", function(err,results){
+            if (err) throw err;
+            for (i in results){
+                console.log("Item: " + results[i].productname + ", Price: " + results[i].price + ", Available Quantity: " + results[i].stockQuantity)
+            }
+            connection.end();
+        }
+    )
+}
 init();
 // function init(){}
 // use inq.prompt to give ask user 2 things
