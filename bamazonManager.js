@@ -103,7 +103,12 @@ function addInventory(){
             }
         }
         ]).then(function(res){
-            console.log(res.inventorynum);
+            console.log("Number to add: " + res.inventorynum);
+            connection.query(
+                "UPDATE products SET stockQuantity = stockQuantity + " + res.inventorynum + " WHERE productname = '" + res.itemlist + "'", function(err,results){
+                if (err) throw err;
+                console.log("Inventory updated!");
+            })
         })
     })
 }
