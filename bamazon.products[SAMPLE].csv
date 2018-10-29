@@ -1,0 +1,10 @@
+"itemid";"productname";"departmentname";"price";"stockquantity"
+1;"Drill";"Tools";100;10
+2;"2 inch Nails";"Hardware";2;10000
+3;"2 x 4 x 10";"Lumber";5;100
+4;"Brush";"Paint";10;2
+5;"Sandpaper";"Tools";1;4
+6;"Spray Paint";"Paint";1;10
+7;"Saw";"Tools";20;5
+8;"Hammer";"Tools";5;20
+9;"Bracket";"Hardware";1;300
