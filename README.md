@@ -1,7 +1,10 @@
 # bamazon
 
 This is command line application that allows uses Node.js and MySQL to allow a user to manage an item inventory. The user will be able to execute four functions:
-* View all products currently in the product database
+* viewProducts: see all items currently in the inventory
+* viewLowInventory: see all items with quantity < 5
+* addInventory: add user-determined number of items to the inventory of a chosen product
+* addNewProduct: add a new item to the inventory
 
 
 ## Getting Started
