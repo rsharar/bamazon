@@ -14,5 +14,5 @@ npm packages
 mysql: https://www.npmjs.com/package/mysql
 ```
 ```
-inquirer: https://www.google.com/search?q=npm+inquirer&oq=npm+inquirer&aqs=chrome..69i57j69i60l3j0j69i59.1394j1j4&sourceid=chrome&ie=UTF-8
+inquirer: https://www.npmjs.com/package/inquirer
 ```
