@@ -56,9 +56,8 @@ function viewProducts() {
         "SELECT * FROM products", function (err, results) {
             if (err) throw err;
             for (i in results) {
-                console.log("Item: " + results[i].productname + ", Price: " + results[i].price + ", Available Quantity: " + results[i].stockQuantity)
+                console.log("Item: " + results[i].productname + ", Price: " + results[i].price + ", Available Quantity: " + results[i].stockquantity)
             }
-            connection.end();
             init();
         }
     )
@@ -72,7 +71,6 @@ function viewLowInventory() {
             for (i in results) {
                 console.log("Item: " + results[i].productname + ", Price: " + results[i].price + ", Available Quantity: " + results[i].stockquantity)
             }
-            connection.end();
             init();
         }
     )
@@ -112,7 +110,6 @@ function addInventory() {
                     if (err) throw err;
                     console.log("Inventory updated!");
                 })
-            connection.end();
             init();
         })
     })
@@ -158,7 +155,6 @@ function addNewProduct() {
                 if (err) throw err;
                 console.log(results.newItemQuantity + " of " + results.newItemName + " added!");
             })
-        connection.end();
         init();
     })
 }
